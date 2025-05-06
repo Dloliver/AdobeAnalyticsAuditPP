@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Adobe Beacon Tracker - Privacy Policy</title>
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      line-height: 1.6;
+      max-width: 750px;
+      margin: 2em auto;
+      padding: 1em;
+      background: #fff;
+      color: #333;
+    }
+    h1, h2 {
+      color: #222;
+    }
+    img.logo {
+      width: 100px;
+      display: block;
+      margin: 0 auto 2em;
+    }
+    hr {
+      margin: 2em 0;
+    }
+  </style>
+</head>
+<body>
+  <img src="AASEARCHER.png" alt="Adobe Beacon Tracker Logo" class="logo">
+  <h1>Privacy Policy for Adobe Beacon Tracker Chrome Extension</h1>
+  <p><strong>Effective Date:</strong> May 6, 2025</p>
+  <hr>
+
+  <h2>Overview</h2>
+  <p>
+    The <strong>Adobe Beacon Tracker</strong> Chrome Extension (“the Extension”) is a client-side tool designed to help users audit Adobe Analytics beacon activity on websites they visit.
+    This Privacy Policy outlines what data is (and is not) collected when using the Extension.
+  </p>
+
+  <h2>No Personal Data Collection</h2>
+  <p>The Extension does <strong>not collect, store, transmit, or share</strong> any of the following types of information:</p>
+  <ul>
+    <li>Personally identifiable information (PII)</li>
+    <li>Health or medical information</li>
+    <li>Financial or payment information</li>
+    <li>Authentication credentials</li>
+    <li>Personal communications</li>
+    <li>IP addresses or location data</li>
+    <li>Web browsing history</li>
+    <li>Clicks, keystrokes, or mouse movements</li>
+    <li>Text, images, or multimedia content from web pages</li>
+  </ul>
+
+  <h2>How the Extension Works</h2>
+  <p>The Extension passively observes network requests made by the browser to Adobe Analytics endpoints (e.g., <code>/b/ss/</code> or <code>/v1/collect</code>) and logs query string parameters such as <code>pageName</code>, <code>eVar1</code>, <code>prop1</code>, etc.</p>
+  <p>This data is:</p>
+  <ul>
+    <li>Stored <strong>locally</strong> in your browser’s <code>localStorage</code></li>
+    <li>Used <strong>only</strong> for display and CSV export</li>
+    <li><strong>Never</strong> transmitted to any server or third party</li>
+    <li>Cleared entirely when the user clicks <strong>"Clear Logs"</strong> or runs <code>clearAdobeBeacons()</code></li>
+  </ul>
+
+  <h2>Chrome Permissions</h2>
+  <p>The Extension requests the following Chrome permissions:</p>
+  <h4><code>host_permissions: ["&lt;all_urls&gt;"]</code></h4>
+  <p>To detect and parse Adobe beacon requests on any site the user chooses to audit.</p>
+  <h4><code>permissions: ["storage"]</code></h4>
+  <p>To store the user's tracking toggle preference in <code>chrome.storage.local</code>.</p>
+  <p>These permissions are <strong>not used</strong> to collect any personal or website data.</p>
+
+  <h2>Changes to This Policy</h2>
+  <p>This policy may be updated from time to time. Updates will be posted on the extension's GitHub repository or accompanying website.</p>
+
+  <h2>Contact</h2>
+  <p>For questions or concerns, please reach out via the GitHub repository or email listed in the Chrome Web Store.</p>
+</body>
+</html>
